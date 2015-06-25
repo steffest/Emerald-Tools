@@ -1,0 +1,41 @@
+<html>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="_style/main.css">
+
+    <script src="_script/binary.js"></script>
+    <script src="_script/emc.js"></script>
+    <script src="_script/ui.js"></script>
+
+</head>
+
+<body>
+    <button id="btn">Load Binary</button>
+    <button id="convert">Convert Level</button>
+    leveloffset
+    <input type="text" value="0" id="leveloffset">
+    - Render as
+    <select id="render">
+        <option>Decimal</option>
+        <option>Hex</option>
+        <option>Json</option>
+        <option selected>Sprites</option>
+    </select>
+    <pre id="level"></pre>
+    <div id="result"></div>
+    <div id="output"></div>
+
+    <script>
+        var url = "/emeraldweb/a/AladdinMine01/pla/1";
+        var basePath = "/emeraldweb/";
+        basePath = "/scrap/";
+        basePath = "caves/";
+
+
+        document.getElementById("btn").onclick = loadFile;
+        document.getElementById("convert").onclick = convertLevel;
+
+    </script>
+
+</body>
+</html>
